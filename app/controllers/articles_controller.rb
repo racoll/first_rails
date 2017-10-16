@@ -1,5 +1,9 @@
 class ArticlesController < ApplicationController
 
+  def index
+    @articles = Article.all
+  end
+
   def show
     @article = Article.find(params[:id]) # we usa an instance variable to hold a reference to the article object
   end
